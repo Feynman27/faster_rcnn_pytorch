@@ -1,13 +1,14 @@
+import _init_paths
 import cv2
+import os
 import numpy as np
-from faster_rcnn import network
+from utils import network
 from faster_rcnn.faster_rcnn import FasterRCNN
-from faster_rcnn.utils.timer import Timer
+from utils.timer import Timer
 
 
 def test():
-    import os
-    im_file = 'demo/004545.jpg'
+    im_file = 'data/demo/004545.jpg'
     # im_file = 'data/VOCdevkit2007/VOC2007/JPEGImages/009036.jpg'
     # im_file = '/media/longc/Data/data/2DMOT2015/test/ETH-Crossing/img1/000100.jpg'
     image = cv2.imread(im_file)
